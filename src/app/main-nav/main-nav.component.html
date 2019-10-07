@@ -15,6 +15,7 @@
       <a mat-list-item routerLink="/contact">Contact</a>
     </mat-nav-list>
   </mat-sidenav>
+  <!--<mat-sidenav-content class="backgroundImage" [ngStyle]="{backgroundImage: 'url(./assets/img/otIzvora.jpg)'}">-->
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -25,10 +26,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Some text</span>
+      <span>{{title}}</span>
     </mat-toolbar>
 	  <router-outlet></router-outlet>
 	  <!-- Add Content Here -->
-	  <div >{{backgroundImg}}</div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
